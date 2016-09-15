@@ -53,8 +53,7 @@ public class ReadFile {
 	 * @return ArrayList containing node-id
 	 */
 	public ArrayList<String> getNodes(String content){
-		ArrayList<String> nodeList = new ArrayList<String>();
-		//String nodePattern = "node[\\s]*\\[\\s*(id)\\s*[0-9]*";
+		ArrayList<String> nodeList = new ArrayList<String>();		
 		String nodePattern = "(id)\\s*[0-9]*";
 		Pattern regex = Pattern.compile(nodePattern);
 		Matcher match = regex.matcher(content);
